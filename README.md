@@ -1,19 +1,20 @@
 <!-- markdownlint-disable MD033 MD041 -->
 
-> ## 关于本仓库 / About this fork
+> # ⚠️ 非官方移植版（Unofficial port / fork）
 >
-> **原项目 / Original project: [Mug-Diffusion by Keytoyze](https://github.com/Keytoyze/Mug-Diffusion)**
-> 版权与许可归原作者所有，本仓库遵循原项目 LICENSE。
+> **原作者 / Original author: [Keytoyze](https://github.com/Keytoyze)**
+> **原始仓库 / Original repository: <https://github.com/Keytoyze/Mug-Diffusion>**
 >
-> 本仓库为 **Windows + RTX 50 系 GPU（Blackwell sm_120）适配移植版**，主要改动：
+> 本仓库并非原作者发布，仅为第三方适配移植。全部版权、模型与原始代码归原作者 Keytoyze 所有，本仓库遵循原项目 LICENSE。如有侵权请联系删除。
+> This is a third-party adaptation, **not** an official release by the original author. All rights belong to Keytoyze.
 >
-> 1. 环境重制：PyTorch 2.7.1+cu128（原生支持 sm_120），Python 3.10 + venv，依赖版本全面锁定（gradio 3.50.2 / pydantic 2.4.2 / pytorch_lightning 1.9.5 / reamber 0.2.1 等，详见 `mushroom_readme.md`）
-> 2. 兼容性补丁：`torch.load(..., weights_only=False)` × 3（torch 2.6+ 默认值变更）
-> 3. Bug 修复：gradio 3.50.2 Slider 传 float 导致 "Get Generation" 崩溃（`count`/`step` 转 int）；空谱面（零物件）友好报错替代 IndexError；预览渲染失败不再中断任务
+> **本仓库做了什么 / What changed**：让项目能在 **Windows + NVIDIA RTX 50 系 GPU（Blackwell, sm_120）** 上运行 ——
+>
+> 1. 环境重制：PyTorch 2.7.1+cu128（首个原生支持 sm_120 的版本）、Python 3.10 venv、依赖版本全面锁定（gradio 3.50.2 / pydantic 2.4.2 / pytorch_lightning 1.9.5 / reamber 0.2.1）
+> 2. 兼容性补丁：3 处 `torch.load(..., weights_only=False)`（适配 torch 2.6+ 默认值变更）
+> 3. Bug 修复：gradio 3.50.2 Slider 传 float 导致 "Get Generation" 崩溃（`count`/`step` 转 int）；空谱面给出友好报错而非 IndexError；预览渲染失败不再中断整个任务
 > 4. 新功能：生成的 .osz 封面优先使用音频内嵌封面（ffmpeg 提取，无内嵌封面时回退默认占位图）
-> 5. 新增 `start_mugdiffusion.bat` 启动脚本与 `mushroom_readme.md` 完整复刻指南
->
-> 复刻步骤（源码获取 → 环境 → minacalc 编译 → 全部补丁）见 **[mushroom_readme.md](mushroom_readme.md)**。
+> 5. 新增 `start_mugdiffusion.bat` 一键启动脚本与 [`mushroom_readme.md`](mushroom_readme.md) 完整复刻指南（从零下载到跑通的每一步）
 
 <div align="center">
 
