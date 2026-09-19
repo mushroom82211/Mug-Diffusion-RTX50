@@ -1,5 +1,14 @@
 <!-- markdownlint-disable MD033 MD041 -->
 
+> # 📦 绿色整合包直接下载（Portable package download）
+>
+> **不想折腾环境？直接下载整合包 / Don't want to set up the environment? Grab the portable package:**
+>
+> **百度网盘 / Baidu Pan: <https://pan.baidu.com/s/1Io9-FOu9imhtapJqYbtAPg>　提取码 / code: `mush`**
+>
+> 包内自带 Python 3.10 + PyTorch 2.7.1 (CUDA 12.8) + 模型 v1.0.0 + ffmpeg，解压后双击「启动MuGDiffusion.bat」即可使用，无需安装任何环境（约 3.56 GB）。
+> Everything is bundled (Python, CUDA-enabled PyTorch, model weights, ffmpeg) — just extract and double-click the launcher .bat, no setup needed (~3.56 GB).
+
 > # ⚠️ 非官方移植版（Unofficial port / fork）
 >
 > **原作者 / Original author: [Keytoyze](https://github.com/Keytoyze)**
